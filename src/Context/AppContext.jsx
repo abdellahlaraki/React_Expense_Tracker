@@ -3,11 +3,16 @@ import { createContext, useReducer } from "react";
 const AppReducer = (state, action) => {
   switch (action.type) {
     case "ADD_Expense":
-      return {...state,expenses:[...state.expenses,action.payload]}
-      case "Delete_Expense":
-        return {...state,expenses:state.expenses.filter(expense=>expense.id!==action.payload)}
-        case "budget":
-          return {...state,budget:action.payload}
+      return { ...state, expenses: [...state.expenses, action.payload] };
+    case "Delete_Expense":
+      return {
+        ...state,
+        expenses: state.expenses.filter(
+          (expense) => expense.id !== action.payload
+        ),
+      };
+    case "budget":
+      return { ...state, budget: action.payload };
     default:
       return state;
   }
@@ -30,11 +35,14 @@ export const AppProvider = (props) => {
     budget: state.budget,
     dispatch,
     state,
-    expenses:state.expenses,
+    expenses: state.expenses,
   };
   return (
     <>
-        <AppContext.Provider value={values}> {props.children} </AppContext.Provider>
+      <AppContext.Provider value={values}>
+        {" "}
+        {props.children}{" "}
+      </AppContext.Provider>
     </>
   );
 };
