@@ -24,7 +24,7 @@ const initialeState = {
     { id: 2, name: "rent", cost: 140 },
     { id: 3, name: "coffe", cost: 10 },
     { id: 4, name: "phone", cost: 50 },
-  ],
+  ]
 };
 
 export const AppContext = createContext();

@@ -31,8 +31,9 @@ const ExpenseForm = () => {
             type="text"
             id="name"
             name="name"
+            placeholder="Enter Name"
             value={name}
-            placeholder="Enter name"
+            
             onChange={(e) => setName(e.target.value)}
             class="mt-1 p-2 w-full border rounded-md"
           />

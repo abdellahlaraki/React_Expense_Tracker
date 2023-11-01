@@ -14,7 +14,7 @@ function App() {
             <Budget />
           </div>
         </div>
-        <div >
+        <div>
           {" "}
           <Remaining />
         </div>
