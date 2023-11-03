@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+tailwind.config.js
+.eslintrc.cjs
+postcss.config.js
+vite.config.js
